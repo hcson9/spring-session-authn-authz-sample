@@ -3,10 +3,6 @@ FROM gradle:8.10.2-jdk17 AS builder
 # 작업 디렉토리 설정
 WORKDIR /apps
 
-# Gradle 캐시를 활용해 의존성만 먼저 다운로드
-COPY build.gradle settings.gradle /apps/
-RUN gradle dependencies --no-daemon --parallel --continue > /dev/null 2>&1 || true
-
 # 빌더 이미지에서 애플리케이션 빌드
 COPY . /apps
 RUN gradle clean build --no-daemon --parallel
