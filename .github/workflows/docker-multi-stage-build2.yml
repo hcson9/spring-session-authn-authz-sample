@@ -9,6 +9,9 @@ jobs:
   docker-build-and-push:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout sources
+      - uses: actions/checkout@v4
+
       # Docker Image 빌드
       - name: Build the Docker image
         run: docker build . --file ./docker/Dockerfile --tag ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_IMAGE_TAG_NAME }}:latest
