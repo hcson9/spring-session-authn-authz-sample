@@ -1,11 +1,12 @@
-name: ci
+name: docker-multi-stage-build
 
 on:
   push:
     branches: [ "main" ]
 env:
   DOCKER_IMAGE_TAG_NAME: session
-  
+
+  # https://github.com/marketplace/actions/build-and-push-docker-images
 jobs:
   docker-build-and-push:
     runs-on: ubuntu-latest
