@@ -26,7 +26,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
           file: ./docker/Dockerfile
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_TAG_NAME }}:latest
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
