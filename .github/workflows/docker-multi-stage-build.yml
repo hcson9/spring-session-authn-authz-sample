@@ -1,8 +1,8 @@
-name: docker multi stage build
+name: docker multi-stage build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "multi-stage" ]
 
   # https://github.com/marketplace/actions/build-and-push-docker-images
 jobs:
