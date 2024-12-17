@@ -1,8 +1,8 @@
-name: deploy-to-ec2
+name: deploy to ec2
 
 on:
   workflow_run:
-    workflows: ["docker-multi-stage-build"]
+    workflows: ["docker multi stage build"]
     types:
       - completed
 jobs:

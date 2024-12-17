@@ -1,4 +1,4 @@
-name: docker-multi-stage-build
+name: docker multi stage build
 
 on:
   push:
