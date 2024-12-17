@@ -22,4 +22,4 @@ jobs:
 
       # 이미지 푸시
       - name: Push the Docker image
-        run: docker push ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_IMAGE_TAG_NAME }}:latest}:latest
+        run: docker push ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_IMAGE_TAG_NAME }}:latest
