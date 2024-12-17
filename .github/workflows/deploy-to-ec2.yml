@@ -25,9 +25,9 @@ jobs:
               sudo docker rm $CONTAINER_ID
             fi
             
-            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_TAG_NAME }}:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_IMAGE_TAG_NAME }}:latest
             sudo docker run -d -p 8080:8080 \
                 -e DB_USERNAME=${{ secrets.DB_USERNAME }} \
                 -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
                 -e DB_URL=${{ secrets.DB_URL }} \
-                ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_TAG_NAME }}:latest
+                ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.DOCKER_IMAGE_TAG_NAME }}:latest
