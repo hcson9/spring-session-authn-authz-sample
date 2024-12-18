@@ -4,11 +4,11 @@ on:
   push:
     branches: [ multi-stage2 ] # 해당 branch에 push 되었을 경우
 
-  # https://github.com/marketplace/actions/build-and-push-docker-images
 jobs:
   docker-build-and-push:
     runs-on: ubuntu-latest
     steps:
+      # 소스 받기
       - name: Checkout sources
         uses: actions/checkout@v4
 
