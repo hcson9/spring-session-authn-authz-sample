@@ -2,7 +2,7 @@ name: build to github
 
 on:
   push:
-    branches: [build-to-github]
+    branches: [ build-to-github ]
 
 jobs:
   github-build-and-push:
