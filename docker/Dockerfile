@@ -9,7 +9,7 @@ RUN gradle clean build --no-daemon --parallel
 
 
 # OpenJDK 17 slim 기반 이미지 사용
-FROM openjdk:17-slim
+FROM openjdk:17-alpine
 
 # 이미지에 레이블 추가
 LABEL type="application"
